@@ -1,0 +1,15 @@
+# --- Web Interface ---
+streamlit
+
+# --- Core Framework & Environment ---
+langchain
+langchain-core
+langchain-community
+python-dotenv
+
+# --- Model Connectors ---
+langchain-groq
+langchain-openai
+
+# --- Vector Database ---
+faiss-cpu

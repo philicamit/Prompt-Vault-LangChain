@@ -1,0 +1,17 @@
+{
+    "name": null,
+    "input_variables": [
+        "length_input",
+        "paper_input",
+        "style_input"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "\nSummarize the research paper titled \"{paper_input}\" according to these specific guidelines:\n\n1. **Format & Tone**:\n   - Explanation Style: {style_input}\n   - Explanation Length: {length_input}\n\n2. **Technical Content**:\n   - **Mathematical Details**: Include any relevant mathematical equations found in the paper using LaTeX format. \n   - **Code Intuition**: Explain complex math using simple, intuitive Python code snippets where applicable.\n\n3. **Clarity & Analogies**:\n   - Use relatable analogies to simplify complex technical ideas.\n\n4. **Strict Accuracy**:\n   - If specific information is not found in the paper, respond exactly with: \"Insufficient information available.\" Do not hallucinate or guess.\n\nEnsure the final summary is clear, accurate, and strictly aligned with the requested style and length.\n",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+}
