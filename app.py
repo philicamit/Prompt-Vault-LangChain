@@ -4,7 +4,7 @@ import os
 
 # --- Page Config ---
 st.set_page_config(page_title="Amit's AI Chatbot", page_icon="🤖")
-st.title("💬 LangChain Chatbot with Memory")
+st.title("🤖 Hello Amit!! | Your Personal AI Assistant")
 st.markdown("This chatbot remembers our conversation! Try telling it your name.")
 
 # --- API Key Setup ---
