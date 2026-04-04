@@ -62,14 +62,25 @@ if prompt := st.chat_input():
     st.session_state.messages.append({"role": "assistant", "content": response})
 
     # 3. Save to Google Sheets (Cloud Logging)
-    new_row = {
-        "Timestamp": str(datetime.datetime.now()),
-        "Name": user_identity,
-        "User_Message": prompt,
-        "AI_Response": response
-    }
-    # Append the data to the sheet
-    conn.create(spreadsheet=SHEET_URL, data=[new_row])
+    # 3. Save to Google Sheets (Cloud Logging)
+    try:
+        # Fetch existing data first to append to it
+        existing_data = conn.read(spreadsheet=SHEET_URL, usecols=[0,1,2,3])
+        
+        # Create the new row as a DataFrame
+        import pandas as pd
+        new_row_df = pd.DataFrame([{
+            "Timestamp": str(datetime.datetime.now()),
+            "Name": user_identity,
+            "User_Message": prompt,
+            "AI_Response": response
+        }])
+        
+        # Combine and update the whole sheet
+        updated_df = pd.concat([existing_data, new_row_df], ignore_index=True)
+        conn.update(spreadsheet=SHEET_URL, data=updated_df)
+    except Exception as e:
+        st.error(f"Sheet Update Error: {e}")
 
     # 4. Save to FAISS (Local Vector Storage)
     new_doc = Document(page_content=f"User: {prompt}\nAI: {response}")
