@@ -1,4 +1,21 @@
+# Local environment variables (API Keys)
 .env
-venv/
+
+# Virtual environment
 .venv/
+venv/
+env/
+
+# Python bytecode & cache
 __pycache__/
+*.py[cod]
+*$py.class
+
+# IDE settings
+.vscode/
+.idea/
+
+# Distribution / packages
+dist/
+build/
+*.egg-info/

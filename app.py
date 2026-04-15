@@ -3,7 +3,7 @@ from langchain_openai import ChatOpenAI
 import os
 
 # --- Page Config ---
-st.set_page_config(page_title="Amit's AI Chatbot", page_icon="🤖")
+st.title("🚀 Amit Rastogi's LangChain AI Chatbot")
 st.title("🤖 Hello Amit!! | Your Personal AI Assistant")
 st.markdown("This chatbot remembers our conversation! Try telling it your name.")
 
