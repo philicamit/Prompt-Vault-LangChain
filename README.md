@@ -30,6 +30,8 @@ A professional repository for managing high-quality **Prompt Templates** and imp
   ```Bash
   pip install -r requirements.txt
 
+---
+
 ##  Technologies
 LangChain: Core orchestration.
 
