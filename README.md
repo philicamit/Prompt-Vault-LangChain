@@ -30,12 +30,14 @@ A professional repository for managing high-quality **Prompt Templates** and imp
   ```Bash
   pip install -r requirements.txt
 
-
-## 🚀 Technologies
+##🚀 Technologies
 LangChain: Core orchestration.
 
 Python 3.13: Runtime environment.
 
 GitHub: Version control and documentation.
+
+## 📊 Author
+**Amit Rastogi** 
 
 
