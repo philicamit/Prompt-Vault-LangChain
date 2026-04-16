@@ -29,6 +29,7 @@ A professional repository for managing high-quality **Prompt Templates** and imp
 3. **Install Dependencies:**
   ```Bash
   pip install -r requirements.txt
+  ```
 
 
 ## 🚀Technologies
